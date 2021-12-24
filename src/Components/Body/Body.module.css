@@ -1,0 +1,23 @@
+video {
+  width: 100%;
+  height: 250%;
+  position: fixed;
+  bottom: 40px;
+  z-index: -1;
+}
+.iframe {
+  height: 63rem;
+  width: 94rem;
+  position: relative;
+  bottom: 330px;
+  left: 12px;
+  z-index: -1;
+  color: transparent;
+}
+
+@media only screen and (max-width: 400px) {
+  .iframe {
+    width: 60rem;
+    height: 90rem;
+  }
+}

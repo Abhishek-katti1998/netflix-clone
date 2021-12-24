@@ -1,0 +1,103 @@
+.parent {
+  position: fixed;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 50%;
+}
+.mainTheme {
+  position: relative;
+  top: 100px;
+  left: 30px;
+  display: flex;
+  flex-flow: column;
+  color: white;
+}
+.buttons {
+  display: flex;
+  flex-flow: row wrap;
+  width: 80%;
+  /* justify-content: space-between; */
+  color: white;
+}
+.buttons button {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+}
+.header {
+  display: flex;
+  color: white;
+  width: 100rem;
+  background-color: transparent;
+  z-index: 1000;
+}
+.left {
+  flex: 3;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-shrink: 3;
+  margin-right: 30px;
+}
+.right {
+  flex: 2;
+  display: flex;
+  flex-flow: row wrap;
+  flex-shrink: 2;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left img {
+  object-fit: contain;
+  width: 120px;
+  z-index: 1000;
+}
+
+.right input {
+  /* line-height: 10px; */
+  height: 20px;
+}
+
+.searchItem {
+  display: flex;
+  align-items: center;
+}
+.searchItem input {
+  background-color: dimgray;
+  border: none;
+}
+.searchItem input:focus {
+  outline: none;
+}
+.search {
+  background-color: dimgray;
+  height: 22px;
+  padding-right: 5px;
+}
+
+/* .notification {
+  font-size: 40px;
+} */
+
+@media only screen and (max-width: 706px) {
+  .left div {
+    display: none;
+  }
+  .search {
+    display: none;
+  }
+  .right input {
+    height: 20px;
+    display: none;
+  }
+
+  .left {
+    justify-content: flex-start;
+  }
+}

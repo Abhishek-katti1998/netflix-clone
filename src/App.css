@@ -1,0 +1,12 @@
+.app {
+  padding: 0px;
+  margin: 0px;
+}
+div::-webkit-scrollbar {
+  display: none;
+}
+@media only screen and (max-width: 400px) {
+  div::-webkit-scrollbar {
+    display: none;
+  }
+}

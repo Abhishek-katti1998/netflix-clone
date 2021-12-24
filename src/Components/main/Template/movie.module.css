@@ -1,0 +1,34 @@
+p {
+  margin-left: 5px;
+  color: white;
+  z-index: -100;
+}
+.prev,
+.next {
+  display: inline;
+  cursor: pointer;
+  color: white;
+  font-size: 7rem;
+  position: relative;
+  z-index: 100;
+}
+.prev {
+  top: 21rem;
+}
+.next {
+  top: -18rem;
+  left: 93rem;
+}
+.slider {
+  z-index: -1;
+}
+
+@media only screen and (max-width: 706px) {
+  .next {
+    top: 13rem;
+    left: 22rem;
+  }
+  .prev {
+    top: 13rem;
+  }
+}

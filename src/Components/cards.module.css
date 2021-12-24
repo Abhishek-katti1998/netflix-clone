@@ -1,0 +1,23 @@
+.card {
+  margin-left: 5px;
+  width: 15rem;
+}
+/* .card  */
+
+img {
+  width: 15rem;
+  object-fit: contain;
+}
+.card :hover {
+  width: 17rem;
+}
+@media only screen and (max-width: 650px) {
+  .card img {
+    width: 13rem;
+
+    object-fit: contain;
+  }
+  .card {
+    width: 95%;
+  }
+}
