@@ -1,7 +1,8 @@
 import React from "react";
 import classes from "./Body.module.css";
 import HoverVideoPlayer from "react-hover-video-player";
-import Container from "./Container/Container";
+// import Main from "../main/main";
+import Main from "../main/mainCpy";
 const Body = () => {
   return (
     <div>
@@ -10,14 +11,14 @@ const Body = () => {
         width="900"
         frameborder="0"
         className={classes.iframe}
-      
       >
         <html lang="en">
           <head></head>
           <body></body>
         </html>
       </iframe>
-      <Container />
+
+      <Main type="movie" />
     </div>
   );
 };

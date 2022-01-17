@@ -1,0 +1,16 @@
+.searchContainer {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.skeleton {
+  /* margin-top: 10px; */
+  /* margin-right: 10px; */
+  margin: 10px 20px 0px 20px;
+}
+.searchCard img {
+  height: inherit;
+}
+.searchCard {
+  height: inherit;
+}

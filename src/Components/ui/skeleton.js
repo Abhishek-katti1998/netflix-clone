@@ -12,7 +12,6 @@ const NetflixLoader = (props) => {
   const coverWidth = 250;
   const padding = 5;
   const speed = 1;
-
   const coverHeightWithPadding = coverHeight + padding;
   const coverWidthWithPadding = coverWidth + padding;
   const initial = 35;
@@ -28,8 +27,17 @@ const NetflixLoader = (props) => {
       backgroundColor="black"
       {...props}
     >
-      <rect x="0" y="0" rx="0" ry="0" width={200} height="20" />
-
+      {props.showReact ? (
+        <rect
+          x="0"
+          y="0"
+          rx="0"
+          ry="0"
+          width={200}
+          height="20"
+          style={{ zIndex: "-1" }}
+        />
+      ) : null}
       {covers.map((g, i) => {
         let vy = Math.floor(i / columns) * coverHeightWithPadding + initial;
         let vx =
@@ -43,7 +51,7 @@ const NetflixLoader = (props) => {
             ry="0"
             width={coverWidth}
             height={coverHeight}
-        
+            style={{ zIndex: "-1" }}
           />
         );
       })}

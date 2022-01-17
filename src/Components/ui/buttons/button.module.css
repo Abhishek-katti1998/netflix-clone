@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  width: 99vw;
+  justify-content: space-between;
+  height: 0vh;
+  position: absolute;
+  /* top: 100rem; */
+  margin-top: 7.5rem;
+  z-index: 2;
+}
+.prev,
+.next {
+  display: inline;
+  cursor: pointer;
+  color: white;
+  font-size: 7rem;
+}
+@media only screen and (max-width: 650px) {
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    margin-top: 2.5rem;
+  }
+}
+@media only screen and (max-width: 530px) {
+}
+@media only screen and (max-width: 480px) {
+  .container {
+    margin-top: 3.5rem;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .container {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .container {
+    margin-top: 2.5rem;
+  }
+}

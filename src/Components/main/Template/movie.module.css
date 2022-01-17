@@ -1,26 +1,8 @@
 p {
+  display: inline;
   margin-left: 5px;
   color: white;
-  z-index: -100;
-}
-.prev,
-.next {
-  display: inline;
-  cursor: pointer;
-  color: white;
-  font-size: 7rem;
-  position: relative;
-  z-index: 100;
-}
-.prev {
-  top: 21rem;
-}
-.next {
-  top: -18rem;
-  left: 93rem;
-}
-.slider {
-  z-index: -1;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @media only screen and (max-width: 706px) {
@@ -30,5 +12,23 @@ p {
   }
   .prev {
     top: 13rem;
+  }
+}
+@media screen and (max-width: 450px) {
+  .prev,
+  .next {
+    display: inline;
+    cursor: pointer;
+    color: white;
+    font-size: 4rem;
+    position: relative;
+    /* z-index: -1; */
+  }
+  .prev {
+    top: 10rem;
+  }
+  .next {
+    top: -27rem;
+    left: 21rem;
   }
 }

@@ -6,18 +6,19 @@ video {
   z-index: -1;
 }
 .iframe {
+  width: 96rem;
   height: 63rem;
-  width: 94rem;
   position: relative;
-  bottom: 330px;
-  left: 12px;
+  bottom: 200px;
   z-index: -1;
-  color: transparent;
+  /* 
+  left: 12px;
+
+  color: transparent; */
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 700px) {
   .iframe {
-    width: 60rem;
-    height: 90rem;
+    display: none;
   }
 }
