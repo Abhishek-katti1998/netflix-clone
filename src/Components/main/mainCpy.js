@@ -28,8 +28,11 @@ const Main = (props) => {
       setLoading(true);
       renderResultsAPI(props, dispatchGenres, dispatchData);
     }
+    return () => {
+      // console.log("unmounted mainCpy.js");
+    };
   }, [props.type]);
-  // console.log("SERIES DATA", seriesData);
+  console.log("SERIES DATA", seriesData);
   // console.log("Movies DATA", movieData);
 
   return (

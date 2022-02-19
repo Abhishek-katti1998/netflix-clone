@@ -9,7 +9,6 @@ import Cards from "../../Cards";
 import { Settings } from "../../../config";
 import Button from "../../ui/buttons/button";
 const Movie = (props) => {
-
   const sliderRef = useRef();
   const [showBtn, setShowBtn] = useState(false);
   const [hoverdIndex, setHoverdIndex] = useState(-1);
@@ -49,7 +48,7 @@ const Movie = (props) => {
   };
 
   return (
-    <div key={props.key} style={{ ...margin }}>
+    <div key={props.key} style={{ ...margin }} onClick={(e)=>{console.log(e.target)}}>
       {showBtn ? (
         <Button
           prev={() => {
@@ -74,9 +73,9 @@ const Movie = (props) => {
           arrows={false}
         >
           {props.movieData?.map((el, index) => {
-          
             return (
               <Cards
+              name={props.name}
                 src={`https://image.tmdb.org/t/p/w500/${el.poster_path}`}
                 key={index}
                 index={index}

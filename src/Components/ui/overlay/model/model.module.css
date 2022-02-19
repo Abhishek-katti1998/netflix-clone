@@ -1,0 +1,9 @@
+.modelContainer {
+  /* position: fixed; */
+  /* transition: all 1s ease;
+  width: 100%; */
+ 
+}
+.images{
+object-fit:contain
+}

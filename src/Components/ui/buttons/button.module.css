@@ -11,10 +11,16 @@
 .prev,
 .next {
   display: inline;
+
   cursor: pointer;
   color: white;
   font-size: 7rem;
 }
+/* .prev,
+.next:hover {
+  transition: 500ms ease;
+  transform: scale(1.5);
+} */
 @media only screen and (max-width: 650px) {
 }
 @media only screen and (max-width: 600px) {

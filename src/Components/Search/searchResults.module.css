@@ -1,16 +1,19 @@
 .searchContainer {
   display: flex;
   flex-flow: row wrap;
-  width: 100%;
+  position: relative;
+  top: 4rem;
+  left: 2rem;
+  width: 98%;
 }
 .skeleton {
   /* margin-top: 10px; */
   /* margin-right: 10px; */
   margin: 10px 20px 0px 20px;
 }
-.searchCard img {
+/* .searchCard img {
   height: inherit;
 }
 .searchCard {
   height: inherit;
-}
+} */
