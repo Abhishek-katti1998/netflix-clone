@@ -43,7 +43,17 @@ function App() {
                 </>
               }
             />
-            <Route path="/films" />
+            <Route
+              path="/films"
+              element={
+                <>
+                  <HeaderChild />
+                  <Home />
+                  {backDropState ? <Backdrop /> : null}
+                  {!play ? <Model /> : <Video />}
+                </>
+              }
+            />
             <Route
               path="/series"
               element={
@@ -56,7 +66,17 @@ function App() {
                 </>
               }
             />
-            <Route path="/list" />
+            <Route
+              path="/list"
+              element={
+                <>
+                  <HeaderChild />
+                  <Home />
+                  {backDropState ? <Backdrop /> : null}
+                  {!play ? <Model /> : <Video />}
+                </>
+              }
+            />
           </Routes>
         </BrowserRouter>
       </>
