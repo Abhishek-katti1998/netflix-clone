@@ -14,14 +14,17 @@ const Cards = (props) => {
   const location = useLocation();
   const movies = useSelector((e) => e.movie);
   const higlight = (e) => {
+    if (window.innerWidth < 600) return;
     if (location.pathname === "/search") return;
     props.higlighHandler(e);
   };
   const removeHighlightHandler = () => {
+    if (window.innerWidth < 600) return;
     if (location.pathname === "/search") return;
     props.removeHighlight();
   };
   const cardClickListner = (event) => {
+    if (window.innerWidth < 600) return;
     let index = Number(event.target.id);
     movies.forEach((element) => {
       if (element.genreName === event.target.alt) {
@@ -41,7 +44,6 @@ const Cards = (props) => {
         alt={props.name}
         src={props.src}
         id={props.index}
-        // alt=""
         className={classes.image}
         key={props.key}
         onMouseEnter={higlight}

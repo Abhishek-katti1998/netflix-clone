@@ -1,5 +1,6 @@
 .searchContainer {
   display: flex;
+
   flex-flow: row wrap;
   position: relative;
   top: 4rem;
@@ -7,13 +8,13 @@
   width: 98%;
 }
 .skeleton {
-  /* margin-top: 10px; */
-  /* margin-right: 10px; */
+ 
   margin: 10px 20px 0px 20px;
 }
-/* .searchCard img {
-  height: inherit;
+@media only screen and (max-width: 500px) {
+.searchContainer {
+    width: 100%;
+  justify-content: center;
+  margin-left: -40px;
 }
-.searchCard {
-  height: inherit;
-} */
+}

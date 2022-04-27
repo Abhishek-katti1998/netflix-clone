@@ -4,32 +4,28 @@
   justify-content: space-between;
   height: 0vh;
   position: absolute;
-  /* top: 100rem; */
-  margin-top: 7.5rem;
+  margin-top: 10.5rem;
   z-index: 2;
 }
 .prev,
 .next {
   display: inline;
-
   cursor: pointer;
   color: white;
   font-size: 7rem;
 }
-/* .prev,
-.next:hover {
-  transition: 500ms ease;
-  transform: scale(1.5);
-} */
 @media only screen and (max-width: 650px) {
+  .prev,
+  .next {
+    display: none;
+  }
 }
 @media only screen and (max-width: 600px) {
   .container {
     margin-top: 2.5rem;
   }
 }
-@media only screen and (max-width: 530px) {
-}
+
 @media only screen and (max-width: 480px) {
   .container {
     margin-top: 3.5rem;

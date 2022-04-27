@@ -2,14 +2,10 @@
   margin-left: 5px;
   width: 15rem;
   height: 22rem;
-  /* transition: all 500ms ease; */
-
-  /* height: 10rem; */
 }
 .cards {
   height: 26rem;
   margin-left: 10px;
-  /* margin-top: 2rem; */
 }
 .image {
   width: 98%;
@@ -22,41 +18,9 @@
   cursor: pointer;
   transform: scale(1.2);
 }
-
-@media only screen and (max-width: 650px) {
-  .card img {
-    width: 100%;
-
-    object-fit: contain;
-  }
-  .card {
-    width: 95%;
-    height: 18rem;
-    /* height: 10rem; */
-  }
-}
-@media only screen and (max-width: 600px) {
-  .card {
-    height: 17rem;
-  }
-}
-@media only screen and (max-width: 530px) {
-  .card {
-    height: 15rem;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .card {
-    height: 13.75rem;
-  }
-}
-@media only screen and (max-width: 420px) {
-  .card {
-    height: 12.4rem;
-  }
-}
-@media only screen and (max-width: 380px) {
-  .card {
-    height: 11rem;
+@media only screen and (max-width: 500px) {
+  .image:hover {
+    cursor: pointer;
+    transform: scale(1);
   }
 }

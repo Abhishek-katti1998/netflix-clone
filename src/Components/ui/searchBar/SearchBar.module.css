@@ -1,0 +1,25 @@
+.searchItem {
+  display: flex;
+  align-items: center;
+}
+.searchItem input {
+  color: white;
+  margin-right: 10px;
+  background-color: dimgray;
+  border: none;
+}
+.searchItem input:focus {
+  outline: none;
+}
+.search {
+  background-color: dimgray;
+  height: 22px;
+  padding-right: 5px;
+}
+.link {
+  text-decoration: none;
+  color: white;
+}
+input::placeholder{
+  color: rgb(171, 169, 169);
+}

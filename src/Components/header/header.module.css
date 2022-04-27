@@ -39,7 +39,7 @@
   display: flex;
   color: white;
   width: 100rem;
-  background-color: transparent;
+  background-color: #111;
 }
 .left {
   flex: 3;
@@ -65,7 +65,6 @@
 }
 
 .right input {
-  /* line-height: 10px; */
   height: 20px;
 }
 
@@ -80,39 +79,17 @@
 .searchItem input:focus {
   outline: none;
 }
-.search {
-  background-color: dimgray;
-  height: 22px;
-  padding-right: 5px;
-}
+
 .link {
   text-decoration: none;
   color: white;
 }
-/* .ip {
-  display: none;
-} */
-/* .ipOpen {
-  height: 20px; */
-/* transition: height 500ms ease; */
-/* } */
-/* .notification {
-  font-size: 40px;
-} */
 
-@media only screen and (max-width: 706px) {
-  /* .left div {
+@media only screen and (max-width: 500px) {
+  .parentContainer {
     display: none;
-  } */
-  /* .search {
-    display: none;
-  } */
-  /* .right input {
-    height: 20px;
-    display: none;
-  } */
-
-  /* .left {
-    justify-content: flex-start;
-  } */
+  }
+  .parent {
+    z-index: -2;
+  }
 }

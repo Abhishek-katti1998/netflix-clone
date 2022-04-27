@@ -12,6 +12,8 @@ import {
   renderReducer,
   vedioReducer,
   playBtnReducer,
+  mobileNavigationReducer,
+  querySearchReducer,
 } from "./reducer";
 const rootReducer = combineReducers({
   gen: genReducer,
@@ -26,5 +28,7 @@ const rootReducer = combineReducers({
   render: renderReducer,
   video: vedioReducer,
   play: playBtnReducer,
+  mobNav: mobileNavigationReducer,
+  query: querySearchReducer,
 });
 export default rootReducer;

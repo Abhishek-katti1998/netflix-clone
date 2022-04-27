@@ -5,8 +5,8 @@ import { playBtnClicked } from "../../../../Store/action/action";
 const Content = (props) => {
   const dispatch = useDispatch();
   const playVideoHandler = () => {
-    console.log("play", props.obj);
-    getVedioApi(props.obj?.id, dispatch,props.obj);
+    // console.log("play", props.obj);
+    getVedioApi(props.obj?.id, dispatch, props.obj);
     dispatch(playBtnClicked(true));
   };
   return (

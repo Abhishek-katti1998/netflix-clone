@@ -1,4 +1,5 @@
 function actionGenerate(actionType, actionPayLoad) {
+  // debugger;
   return {
     type: actionType,
     payLoad: actionPayLoad,
@@ -16,3 +17,5 @@ export const ModelState = (data) => actionGenerate("model", data);
 export const clickedIndexState = (data) => actionGenerate("index", data);
 export const vedioDetailState = (data) => actionGenerate("video", data);
 export const playBtnClicked = (data) => actionGenerate("play", data);
+export const showMobileNav = (data) => actionGenerate("showNav", data);
+export const querySearch = (data) => actionGenerate("query", data);

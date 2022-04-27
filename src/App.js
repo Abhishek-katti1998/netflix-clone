@@ -11,6 +11,7 @@ import Backdrop from "./Components/ui/overlay/backdrop/backdrop";
 import { useSelector } from "react-redux";
 import Model from "./Components/ui/overlay/model/model";
 import Video from "./Components/ui/video";
+import Hamburger from "./Components/ui/hamburger/hamburger";
 function App() {
   const backDropState = useSelector((sel) => sel.backdrop);
   const modelState = useSelector((sel) => sel.model);
@@ -20,12 +21,13 @@ function App() {
     <div className="App">
       <>
         <BrowserRouter>
+          <HeaderChild />
           <Routes>
             <Route
               path="/search"
               element={
                 <>
-                  <HeaderChild />
+                  <Hamburger />
                   <SearchResults />
                   {backDropState ? <Backdrop /> : null}
                   {!play ? <Model /> : <Video />}
@@ -36,7 +38,6 @@ function App() {
               path="/"
               element={
                 <>
-                  <HeaderChild />
                   <Home />
                   {backDropState ? <Backdrop /> : null}
                   {!play ? <Model /> : <Video />}
@@ -47,7 +48,6 @@ function App() {
               path="/films"
               element={
                 <>
-                  <HeaderChild />
                   <Home />
                   {backDropState ? <Backdrop /> : null}
                   {!play ? <Model /> : <Video />}
@@ -58,8 +58,6 @@ function App() {
               path="/series"
               element={
                 <>
-                  <HeaderChild />
-                  {/* <SeriesMain /> */}
                   <Main type="series" />
                   {backDropState ? <Backdrop /> : null}
                   {!play ? <Model /> : <Video />}
@@ -70,7 +68,6 @@ function App() {
               path="/list"
               element={
                 <>
-                  <HeaderChild />
                   <Home />
                   {backDropState ? <Backdrop /> : null}
                   {!play ? <Model /> : <Video />}

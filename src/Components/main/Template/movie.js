@@ -9,6 +9,7 @@ import Cards from "../../Cards";
 import { Settings } from "../../../config";
 import Button from "../../ui/buttons/button";
 const Movie = (props) => {
+  // debugger;
   const sliderRef = useRef();
   const [showBtn, setShowBtn] = useState(false);
   const [hoverdIndex, setHoverdIndex] = useState(-1);
@@ -16,15 +17,17 @@ const Movie = (props) => {
     new Array(20).fill({ opacity: 1 })
   );
 
+  // console.log(flexDom[0].style.display);
+
   const settings = Settings;
-  let margin =
-    props.index === 0 && props.type !== "series"
-      ? { marginTop: "0px" }
-      : { marginTop: "10rem" };
-  margin =
-    props.index === 0 && props.type === "series"
-      ? { marginTop: "10rem" }
-      : { marginTop: "10rem" };
+  // let margin =
+  //   props.index === 0 && props.type !== "series"
+  //     ? { marginTop: "0px" }
+  //     : { marginTop: "10rem" };
+  // margin =
+  //   props.index === 0 && props.type === "series"
+  //     ? { marginTop: "10rem" }
+  //     : { marginTop: "10rem" };
   const showButtonsHandler = () => {
     setShowBtn(true);
   };
@@ -48,7 +51,12 @@ const Movie = (props) => {
   };
 
   return (
-    <div key={props.key} style={{ ...margin }} onClick={(e)=>{console.log(e.target)}}>
+    <div
+      key={props.key}
+      onClick={(e) => {
+        // console.log(e.target);
+      }}
+    >
       {showBtn ? (
         <Button
           prev={() => {
@@ -60,33 +68,40 @@ const Movie = (props) => {
           reRender={showButtonsHandler}
         />
       ) : null}
-      <div>
-        <p style={{ fontSize: "35px" }}>{props.name ? props.name : "Movies"}</p>
-      </div>
-      <div onMouseEnter={showButtonsHandler} onMouseLeave={hideButtonHandler}>
-        <Slider
-          {...settings}
-          ref={sliderRef}
-          className={classes.slider}
-          touchMove={true}
-          // swipeToSlide={true}
-          arrows={false}
+      <div className={classes.flexContainer}>
+        <p className={classes.flexItem1}>
+          {props.name ? props.name : "Movies"}
+        </p>
+
+        <div
+          className={classes.flexItem2}
+          onMouseEnter={showButtonsHandler}
+          onMouseLeave={hideButtonHandler}
         >
-          {props.movieData?.map((el, index) => {
-            return (
-              <Cards
-              name={props.name}
-                src={`https://image.tmdb.org/t/p/w500/${el.poster_path}`}
-                key={index}
-                index={index}
-                higlighHandler={higlighHandler}
-                removeHighlight={removeHighlight}
-                hoverdIndex={hoverdIndex}
-                styleArr={styleArray[index]}
-              />
-            );
-          })}
-        </Slider>
+          <Slider
+            {...settings}
+            ref={sliderRef}
+            className={classes.slider}
+            touchMove={true}
+            // swipeToSlide={true}
+            arrows={false}
+          >
+            {props.movieData?.map((el, index) => {
+              return (
+                <Cards
+                  name={props.name}
+                  src={`https://image.tmdb.org/t/p/w500/${el.poster_path}`}
+                  key={index}
+                  index={index}
+                  higlighHandler={higlighHandler}
+                  removeHighlight={removeHighlight}
+                  hoverdIndex={hoverdIndex}
+                  styleArr={styleArray[index]}
+                />
+              );
+            })}
+          </Slider>
+        </div>
       </div>
     </div>
   );

@@ -5,11 +5,11 @@ import ReactDOM from "react-dom";
 import React from "react";
 const Video = () => {
   const vedioData = useSelector((sel) => sel.video);
-  console.log(
-    "VideoData",
-    vedioData,
-    `https://www.youtube.com/embed/${vedioData?.key}?autoplay=1&mute=1`
-  );
+  // console.log(
+  //   "VideoData",
+  //   vedioData,
+  //   `https://www.youtube.com/embed/${vedioData?.key}?autoplay=1&mute=1`
+  // );
 
   return (
     <>

@@ -1,8 +1,21 @@
 p {
-  display: inline;
-  margin-left: 5px;
   color: white;
-  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  font-size: 35px;
+}
+.flexItem1 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.flexItem2 {
+  position: relative;
+  bottom: 15px;
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  margin-bottom: 25px;
 }
 
 @media only screen and (max-width: 706px) {
@@ -12,6 +25,19 @@ p {
   }
   .prev {
     top: 13rem;
+  }
+
+  .flexItem2 {
+    bottom: 50px;
+  }
+}
+@media screen and (max-width: 500px) {
+  p {
+    font-size: 24px;
+  }
+  .flexContainer {
+    margin-top: 40px;
+    margin-bottom: -290px;
   }
 }
 @media screen and (max-width: 450px) {
@@ -30,5 +56,52 @@ p {
   .next {
     top: -27rem;
     left: 21rem;
+  }
+
+  .flexContainer {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    margin-top: 40px;
+  }
+  .flexItem2 {
+    bottom: 100px;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .flexItem2 {
+    bottom: 70px;
+  }
+  .flexContainer {
+    margin-bottom: -140px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flexItem2 {
+    bottom: 70px;
+  }
+  .flexContainer {
+    margin-bottom: -130px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .flexItem2 {
+    bottom: 70px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .flexItem2 {
+    bottom: 100px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .flexItem2 {
+    bottom: 120px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .flexItem2 {
+    bottom: 120px;
   }
 }

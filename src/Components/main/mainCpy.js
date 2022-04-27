@@ -5,6 +5,7 @@ import MovieParent from "./Template/movie-parent";
 import { renderResultsAPI } from "../../API/renderAPI";
 import Loader from "../ui/loader";
 import { dispatchGenresFunc, dispatchDataFunc } from "../../Dispatch/dispatch";
+import Hamburger from "../ui/hamburger/hamburger";
 const Main = (props) => {
   const genrData = useSelector((selector) => {
     return selector.gen;
@@ -32,11 +33,12 @@ const Main = (props) => {
       // console.log("unmounted mainCpy.js");
     };
   }, [props.type]);
-  console.log("SERIES DATA", seriesData);
+  // console.log("SERIES DATA", seriesData);
   // console.log("Movies DATA", movieData);
 
   return (
     <div className={classes.main}>
+      <Hamburger />
       {!loading ? (
         <MovieParent
           movieData={props.type === "movie" ? movieData : seriesData}

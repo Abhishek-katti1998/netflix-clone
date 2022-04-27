@@ -10,7 +10,10 @@ const initialModelState = false;
 const initialIndexState = -1;
 const initialVedioState = "#";
 const initialPlayBtnState = false;
+const showMobileNavigation = false;
+const inittialQuery = "";
 export const genReducer = (state = intialGenState, action) => {
+  // debugger;
   switch (action.type) {
     case "genre":
       return action.payLoad;
@@ -114,6 +117,25 @@ export const vedioReducer = (state = initialVedioState, action) => {
 export const playBtnReducer = (state = initialPlayBtnState, action) => {
   switch (action.type) {
     case "play":
+      return action.payLoad;
+    default:
+      return state;
+  }
+};
+export const mobileNavigationReducer = (
+  state = showMobileNavigation,
+  action
+) => {
+  switch (action.type) {
+    case "showNav":
+      return action.payLoad;
+    default:
+      return state;
+  }
+};
+export const querySearchReducer = (state = inittialQuery, action) => {
+  switch (action.type) {
+    case "query":
       return action.payLoad;
     default:
       return state;
