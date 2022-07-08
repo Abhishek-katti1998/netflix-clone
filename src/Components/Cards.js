@@ -1,4 +1,3 @@
-import { Card } from "@mui/material";
 import React from "react";
 import classes from "./cards.module.css";
 import { useLocation } from "react-router";
@@ -8,7 +7,6 @@ import {
   ModelState,
   clickedIndexState,
 } from "../Store/action/action";
-import { getVedioApi } from "../API/getVedio";
 const Cards = (props) => {
   const dispatch = useDispatch();
   const location = useLocation();
@@ -39,10 +37,10 @@ const Cards = (props) => {
   };
   return (
     <div className={classes.cards}>
-      {/* <Card className={classes.card}> */}
       <img
         alt={props.name}
         src={props.src}
+        loading="lazy"
         id={props.index}
         className={classes.image}
         key={props.key}
@@ -51,7 +49,6 @@ const Cards = (props) => {
         style={{ opacity: props.styleArr?.opacity }}
         onClick={cardClickListner}
       ></img>
-      {/* </Card> */}
     </div>
   );
 };

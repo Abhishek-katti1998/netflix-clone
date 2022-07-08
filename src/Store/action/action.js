@@ -1,5 +1,4 @@
 function actionGenerate(actionType, actionPayLoad) {
-  // debugger;
   return {
     type: actionType,
     payLoad: actionPayLoad,

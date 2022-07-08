@@ -21,20 +21,22 @@ const Main = (props) => {
   const dispatchGenres = (data) => dispatchGenresFunc(props, data, dispatch);
   const dispatchData = (data) =>
     dispatchDataFunc(props, data, dispatch, moviesArray, setLoading);
-
+  const dispatchRenderError = useDispatch();
   useEffect(() => {
     if (movieData.length === 19 && props.type === "movie") return;
     if (movieData.length === 16 && props.type === "series") return;
     else {
       setLoading(true);
-      renderResultsAPI(props, dispatchGenres, dispatchData);
+      renderResultsAPI(
+        props,
+        dispatchGenres,
+        dispatchData,
+        dispatchRenderError,
+        setLoading
+      );
     }
-    return () => {
-      // console.log("unmounted mainCpy.js");
-    };
+    return () => {};
   }, [props.type]);
-  // console.log("SERIES DATA", seriesData);
-  // console.log("Movies DATA", movieData);
 
   return (
     <div className={classes.main}>

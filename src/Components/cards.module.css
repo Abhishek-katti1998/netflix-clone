@@ -2,16 +2,23 @@
   margin-left: 5px;
   width: 15rem;
   height: 22rem;
+
 }
 .cards {
   height: 26rem;
   margin-left: 10px;
+  border-radius: 9px;
+  overflow: hidden;
+
 }
 .image {
   width: 98%;
   height: 100%;
   transition: all 200ms ease-in-out;
   object-fit: contain;
+  transition: all 0.2s linear;
+
+
 }
 
 .image:hover {

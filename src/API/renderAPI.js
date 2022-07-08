@@ -4,15 +4,20 @@ import {
   movieData_API,
   seriesData_API,
 } from "../config";
-export const renderResultsAPI = async (props, dispatchGenres, dispatchData) => {
-  // console.log("props", props);
+import { appendError } from "../Store/action/action";
+export const renderResultsAPI = async (
+  props,
+  dispatchGenres,
+  dispatchData,
+  dispatchRenderError,
+  setLoading
+) => {
   try {
     let requests = [];
     const genrePromise = await fetch(
       props.type === "movie" ? `${movieGenre_API}` : `${seriesGenre_API}`
     );
     if (!genrePromise.ok) throw new Error("Failed to fetch Genres ;(");
-    // console.log("GenrePromise", genrePromise);
     const genreData = await genrePromise.json();
     if (genreData) {
       dispatchGenres(genreData);
@@ -23,7 +28,6 @@ export const renderResultsAPI = async (props, dispatchGenres, dispatchData) => {
         requests = genreData.genres.map((p) => fetch(`${api}${p?.id}`));
       }
       const ans = await Promise.all(requests);
-      // console.log("Answer", ans);
 
       for (let i = 0; i < ans.length; i++) {
         if (!ans[i].ok)
@@ -37,6 +41,8 @@ export const renderResultsAPI = async (props, dispatchGenres, dispatchData) => {
       }
     }
   } catch (err) {
-    // console.log(`${err.message}`);
+    console.log(`ERRRR------------${err.message}`);
+    setLoading(false);
+    dispatchRenderError(appendError(err.message));
   }
 };

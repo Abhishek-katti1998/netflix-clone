@@ -19,9 +19,7 @@ export const searchMovieApiCall = async (query, setMovieData, setErrorFunc) => {
     let data = [...temp[0], ...temp[1]];
     setMovieData(data);
   } catch (err) {
+    console.log("ERROR OCCURED", err.message);
     setErrorFunc(err.message);
-    // console.log(err.message);
-
-    // console.log(`error occured--->${err}`);
   }
 };

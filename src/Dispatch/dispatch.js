@@ -25,7 +25,6 @@ export const dispatchDataFunc = (
 ) => {
   moviesArray.push(data);
   if (props.type === "movie" && moviesArray.length >= 19) {
-    // console.log("moviesArray", moviesArray);
     dispatch(appendMovies(moviesArray));
   }
   if (props.type === "series" && moviesArray.length >= 16) {
@@ -39,8 +38,7 @@ export const dispatchSearchResults = (dispatch, data) => {
 };
 
 export const dispatchError = (dispatch, error) => {
-  // console.log("disptach.js--------->", error);
   dispatch(loadSearchResults(false));
-  // console.log("Error in dispatch.js", error);
+
   dispatch(appendError(error));
 };

@@ -20,14 +20,7 @@ const Movie = (props) => {
   // console.log(flexDom[0].style.display);
 
   const settings = Settings;
-  // let margin =
-  //   props.index === 0 && props.type !== "series"
-  //     ? { marginTop: "0px" }
-  //     : { marginTop: "10rem" };
-  // margin =
-  //   props.index === 0 && props.type === "series"
-  //     ? { marginTop: "10rem" }
-  //     : { marginTop: "10rem" };
+
   const showButtonsHandler = () => {
     setShowBtn(true);
   };
